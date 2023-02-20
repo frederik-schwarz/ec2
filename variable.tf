@@ -5,7 +5,7 @@ variable "create_aws_instance" {
 }
 
 variable "aws_instance" {
-  default = "Object to define instance config."
+  description = "Object to define instance config."
   type = object({
     ami = optional(string, null)
     associate_public_ip_address = optional(string, "false")

@@ -1,0 +1,19 @@
+variable "create_aws_instance" {
+  description = "Whether to create instance or not."
+  type = bool
+  default = false
+}
+
+variable "aws_instance" {
+  default = "Object to define instance config."
+  type = object({
+    ami = optional(string, null)
+    associate_public_ip_address = optional(string, "false")
+    availability_zone = optional(string, "ap-southeast-2")
+    instance_type = optional(string, "t2.micro")
+    key_name = optional(string, null)
+    security_groups = optional(list(string), null)
+    subnet_id = optional(string, null)
+    tags = optional(map(string), null)
+  })
+}

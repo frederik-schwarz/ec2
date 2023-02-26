@@ -9,7 +9,7 @@ variable "aws_instance" {
   type = object({
     ami = optional(string, null)
     associate_public_ip_address = optional(string, "false")
-    availability_zone = optional(string, "ap-southeast-2")
+    availability_zone = optional(string, null)
     instance_type = optional(string, "t2.micro")
     key_name = optional(string, null)
     security_groups = optional(list(string), null)

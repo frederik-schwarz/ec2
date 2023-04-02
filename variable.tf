@@ -15,6 +15,7 @@ variable "aws_instance" {
     key_name = optional(string, null)
     security_groups = optional(list(string), null)
     subnet_id = optional(string, null)
+    user_data = optional(string, null)
     tags = optional(map(string), null)
   })
 }

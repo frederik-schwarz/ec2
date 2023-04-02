@@ -8,6 +8,7 @@ resource "aws_instance" "dev_managed" {
     instance_type = var.aws_instance.instance_type
     key_name = var.aws_instance.key_name
     security_groups = var.aws_instance.security_groups
+    vpc_security_group_ids = var.aws_instance.vpc_security_group_ids
     subnet_id = var.aws_instance.subnet_id
     user_data = var.aws_instance.user_data
 
